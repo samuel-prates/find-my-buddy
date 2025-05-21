@@ -1,0 +1,18 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+nav a,
+nav ul a {
+  color: #000;
+}
+
+@media only screen and (min-width: 601px) {
+  .nav-extended {
+    background-color: aquamarine;
+    color: #000;
+  }
+
+  button[type=submit] {
+    width: 100%;
+  }
+}
