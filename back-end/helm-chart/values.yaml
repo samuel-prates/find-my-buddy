@@ -1,0 +1,29 @@
+apiVersion: v1
+appName: find-my-buddy
+replicaCount: 1
+
+image:
+  repository: your-docker-repo/find-my-buddy
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  enabled: true
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - /
+
+resources: {}
+  
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
